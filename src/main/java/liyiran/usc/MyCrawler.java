@@ -1,4 +1,4 @@
-/*
+package liyiran.usc;/*
  * $Id$
  *
  * Copyright (c) 2003, 2004 WorldTicket A/S

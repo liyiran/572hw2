@@ -1,4 +1,4 @@
-/*
+package liyiran.usc;/*
  * $Id$
  *
  * Copyright (c) 2003, 2004 WorldTicket A/S
@@ -10,7 +10,7 @@
  * @version $Revision$ $Date$
  */
 
-public class AssignmentTest {
+public class AssignmentTestCase {
 //    @Test
 //    @Disabled
 //    public void test1() throws Exception {
@@ -41,6 +41,10 @@ public class AssignmentTest {
 //         * Start the crawl. This is a blocking operation, meaning that your code
 //         * will reach the line after this only when crawling is finished.
 //         */
-//        controller.start(MyCrawler.class, numberOfCrawlers);
+//        controller.start(liyiran.usc.MyCrawler.class, numberOfCrawlers);
+//    }
+//    @Test
+//    public void testHello(){
+//        Assertions.assertTrue(true);
 //    }
 }
