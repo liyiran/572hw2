@@ -45,12 +45,34 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.joda/joda-beans -->
+        <dependency>
+            <groupId>org.joda</groupId>
+            <artifactId>joda-beans</artifactId>
+            <version>2.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.joda/maven-joda-beans-plugin -->
+        <dependency>
+            <groupId>org.joda</groupId>
+            <artifactId>maven-joda-beans-plugin</artifactId>
+            <version>0.7.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.197</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.joda</groupId>
+                <artifactId>joda-beans-maven-plugin</artifactId>
+                <version>1.1</version>
             </plugin>
         </plugins>
     </build>

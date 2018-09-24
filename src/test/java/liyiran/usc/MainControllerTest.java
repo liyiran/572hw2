@@ -7,6 +7,8 @@
 package liyiran.usc;
 
 import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -31,11 +33,23 @@ public class MainControllerTest {
 
     @Autowired
     private MockMvc mvc;
+    @Autowired
+    private CrawEntityRepository crawEntityRepository;
 
     @Test
     public void getHello() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("Greetings from Spring Boot!")));
+    }
+
+    @Test
+    public void testRepository() {
+        WebPage webPage = new WebPage();
+        webPage.setUrl("test");
+        webPage = crawEntityRepository.save(webPage);
+        WebPage found = crawEntityRepository.findByUrl(webPage.getUrl());
+        assertNotNull(found);
+        assertEquals(webPage.getUrl(), found.getUrl());
     }
 }
